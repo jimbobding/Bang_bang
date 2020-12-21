@@ -1,1 +1,1 @@
-web: guincorn bang_bang.wsgi
+web: guincorn bang_bang.wsgi:application
