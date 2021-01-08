@@ -172,7 +172,7 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
-LOGIN_URL = 'accounts-login'
+LOGIN_URL = 'blog-home'
 
 
 if 'DEVELOPMENT' in os.environ:
