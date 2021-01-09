@@ -36,3 +36,8 @@ Sunny's Bang Bang
 1. As a Returning Visitor, I want to be able to register an account with the site.
 
 - set up an account using my email addres and username.
+- Recieved email with link to confirmation of registered account, submited registered account. Account now active.
+
+Resetiing password
+- Use forgot password link, this sent me an email woth a link to reset my email. The link took me to password reset page wheer I changed the password.
+- nTried to log in with olsd password and was unable to. Was able to log in with new password.

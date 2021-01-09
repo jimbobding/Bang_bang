@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="header-container container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="hero-image">
+                <div class="title-font  shadow px-2 mx-auto">
+                    <h1 class="text-center my-auto hero-title">About</h1>
+                    <p class="text-center">Farm to Box to You</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 ">
+            <img src="{{ MEDIA_URL }}sauce-hand.jpg" alt="" height="300"
+                class="img-fluid veg-basket-img rounded mx-auto d-block mx-auto">
+
+        </div>
+        <div class="col-6 orange">
+            <div class="jumbotron-sauce mt-5">
+                <h2 class="text-center header-section">
+                    <strong>Sauce</strong>
+                </h2>
+                <hr class="w-50 mt-4" />
+                <p class="text-center landing-paragraph mb-lg-4 mt-lg-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt itaque, eligendi
+                    nulla adipisci esse, corrupti laudantium impedit cupiditate sint quo! Quae nostrum ut consectetur
+                    totam vero suscipit, asperiores veniam?
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt itaque, eligendi
+                    nulla adipisci esse, corrupti laudantium impedit cupiditate sint quo! Quae nostrum ut consectetur
+                    totam vero suscipit, asperiores veniam?
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt itaque, eligendi
+                    nulla adipisci esse, corrupti laudantium impedit cupiditate sint quo! Quae nostrum ut consectetur
+                    totam vero suscipit, asperiores veniam?
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 blue">
+            <h1>left</h1>
+        </div>
+        <div class="col-6">
+            <img src="{{ MEDIA_URL }}homemade-sauce.jpg" alt="" height="300"
+                class="img-fluid veg-basket-img rounded mx-auto d-block mx-auto">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% block postloadjs %}
+<!--AOS SCript-->
+<script>
+    AOS.init();
+</script>
+<!--AOS SCript End-->
+{% endblock %} {% include 'includes/footer.html' %}

@@ -138,31 +138,3 @@ a.article-title:hover {
 .allauth-form-inner-content a {
   color: black; /* text-info */
 }
-
-.hero-image {
-  background: url("/media/it-bangs.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  border: 1px solid black !important;
-}
-
-.orange {
-    background-color:orange;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.sauce-hand {
-    background: url("/media/sauce-hand.jpg") no-repeat center center fixed;
-    width: auto;
-    height: 300px;;
-    border: 1px solid black !important;
-}
-
-.jumbotron-sauce {
-  margin-top: 0%;
-  color: white;
-  background-color: rgb(253, 89, 86, 0.5);
-}
