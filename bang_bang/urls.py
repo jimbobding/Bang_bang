@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('register/', user_views.register, name='register'),
     path('', user_views.profile, name='profile'),
-    path('blog', include('blog.urls')),
+    path('blog/', include('blog.urls')),
     path('home/', include('home.urls')),
     path('register/', user_views.register, name='register'),
 
