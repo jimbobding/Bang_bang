@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+html {
+  height: 100%;
+}
+
 body {
-  background: #fafafa;
-  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: "Raleway", serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   margin-top: 5rem;
 }
 
@@ -139,10 +151,14 @@ a.article-title:hover {
   color: black; /* text-info */
 }
 
+/* ------------------------------- Home */
+
+
 .hero-image {
   background: url("/media/it-bangs.jpg") no-repeat center center fixed;
-  background-size: cover;
+  object-fit:cover;
   height: 100vh;
+  width: 100vw;
   border: 1px solid black !important;
 }
 
@@ -154,15 +170,43 @@ a.article-title:hover {
     background-color: blue;
 }
 
-.sauce-hand {
-    background: url("/media/sauce-hand.jpg") no-repeat center center fixed;
-    width: auto;
-    height: 300px;;
-    border: 1px solid black !important;
+
+.title-font {
+  position: relative;
+  top: 30%;
+  font-size: 40px;
+  color: whitesmoke;
+  letter-spacing: 6px;
 }
 
-.jumbotron-sauce {
+.hero-title {
+    font-size: 60px;
+    color: green;
+}
+
+.home-col {
+    height: 400px;
+    border: 1px black solid;
+}
+
+.jumbotron-subscriptions {
   margin-top: 0%;
   color: white;
   background-color: rgb(253, 89, 86, 0.5);
+  z-index: 3;
+}
+
+.subscription-container {
+  background-color: salmon;
+  background: radial-gradient(
+      rgba(249, 238, 238, 0.91),
+      rgba(152, 142, 142, 0.04)
+    ),
+    url("/media/chillies.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header-section {
+  text-align: center;
+  margin-top: 40px;
 }
