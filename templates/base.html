@@ -59,7 +59,8 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="{% url 'home'%}">Home</a>
-                        <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                        <a class="nav-item nav-link" href="">About</a>
+                        <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -67,9 +68,11 @@
                         <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                         <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                         <a class="nav-item nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        
                         {% else %}
                         <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
                         <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
                         {% endif %}
                     </div>
                 </div>
