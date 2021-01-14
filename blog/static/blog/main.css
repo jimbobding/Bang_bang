@@ -210,3 +210,10 @@ a.article-title:hover {
   text-align: center;
   margin-top: 40px;
 }
+
+
+.product-card {
+    width: 18rem;
+    height: 18rem;
+}
+

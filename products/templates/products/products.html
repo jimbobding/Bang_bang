@@ -1,182 +1,61 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="header-container container-fluid">
-  <div class="row">
-    <div class="col-12 px-0">
-      <div class="products-image">
-        <div class="title-font shadow mx-auto px-2">
-          <h1 class="text-center my-auto hero-title">Products</h1>
-          <p class="text-center">Sauce and Merch</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container categories-container mt-3">
-  <div class="row">
-    <div class="col">
-      <ul class="nav justify-content-center uppercase">
-        <li
-          class="nav-item border border-dark mr-3 dropdown category-nav-item list-style-none"
-        >
-          <a
-            class="nav-link category-main-nav dropdown-toggle"
-            id="categories_dropdown"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="true"
-            href="#"
-          >
-            <i class="fas fa-box-open mr-3 icon-blue"></i> Products
-          </a>
-          <ul
-            class="dropdown-menu dropdown-tea-columns"
-            aria-labelledby="categories_dropdown"
-          >
-            <li>
-              <a
-                href=""
-                class="dropdown-item"
-                >Fruit and Veg</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="dropdown-item"
-                >Fruit</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="dropdown-item"
-                >Veg</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="dropdown-item"
-                >Subscriptions</a
-              >
-            </li>
-
-            <div class="dropdown-divider my-0"></div>
-            <li>
-              <a href="" class="dropdown-item"
-                >All Products</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 order-md-first">
-    <p class="text-muted mt-3 text-center text-md-left">
-      {% if search_term or current_categories or current_sorting != 'None_None'%}
-      
-      <span class="small"
-        ><a href="">Products Home</a> |
-      </span>
-      {% endif %} {{ products|length }} Products{% if search_term %} found for
-      <strong>"{{ search_term }}"</strong>{% endif %}
-    </p>
-  </div>
-  <div class="container-fluid py-5">
     <div class="row">
-      {% for product in products %}
-      <div
-        class="col-lg-4 col-md-6 col-12 justify-content-center justify-content-md-end pt-5"
-      >
-        <div
-          class="card mx-auto product-card h-100 border-0"
-          style="width: 18rem"
-        >
-          {% if product.image %}
-       <a href="">
-            <img
-              class="img-fluid product-img"
-              src=" {{ product.image.url }}"
-              alt="{{ product.name }}"
-            />
-          </a>
-          {% else %}
-          <a href="">
-            <img
-              class="img-fluid"
-              src=""
-              alt=""
-            />
-          </a>
-          {% endif %}
-          <div class="card-body">
-            <div class="card-text text-center">
-              <h3 class="text-center">{{ product.name }}</h3>
-              <hr />
-              <p>£{{ product.price }}</p>
-              <p class="text-center">Price per box</p>
-              <p>£{{ product.price_per_box }}</p>
-              <p class="">{{ product.category.friendly_name }}</p>
-              {% if request.user.is_superuser %}
-              <small class="ml-3">
-                <a href="">Edit</a> |
-                <a
-                  class="text-danger"
-                  href=""
-                  >Delete</a
-                >
-              </small>
-              {% endif %}
+        <div class="col-12 px-0">
+            <div class="products-image">
+                <div class="title-font shadow mx-auto px-2">
+                    <h1 class="text-center my-auto hero-title">Products</h1>
+                    <p class="text-center">Sauce and Merch</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-
-      {% endfor %}
     </div>
-  </div>
 </div>
-<div class="btn-1 btt-button rounded-0 border border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
+
+<div class="container">
+    <div class="row ">
+        <div class="col justify-content-center  d-flex ">
+            <a href="{% url 'products_criteria' %}?category=Sauce">
+                <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
+                    <img class="img-fluid product-img" src=" {{ MEDIA_URL }}3-way-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">SAUCE</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col justify-content-center  d-flex ">
+            <a href="{% url 'products_criteria' %}?category=Merch">
+                <div class="card product-card">
+                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">MERCH</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col text-center">
+
+            <h1>Products</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae quibusdam dolor aperiam, quis
+                culpa animi?
+                Dolore ipsam quam nemo dolorem consequatur ullam, qui consectetur hic magnam culpa neque eum?
+            </p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
 
 
-   <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
 
-    <script type="text/javascript" >
-        $('#sort-selector').change(function(){
-            var selector = $(this);
-            var currentUrl = new URL (window.location);
-
-            var selectedVal = selector.val();
-            if (selectedVal != "reset") {
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
-
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
-
-                window.location.replace(currentUrl);
-
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
 {% endblock %}
