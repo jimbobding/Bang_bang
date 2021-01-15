@@ -71,6 +71,45 @@
     </div>
 </div>
 
+<div class="header-container container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="products-image">
+                <div class="title-font shadow mx-auto px-2">
+                    <h1 class="text-center my-auto hero-title">Products</h1>
+                    <p class="text-center">Sauce and Merch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row ">
+        <div class="col justify-content-center  d-flex ">
+            <a href="{% url 'products_criteria' %}?category=Sauce">
+                <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
+                    <img class="img-fluid product-img" src=" {{ MEDIA_URL }}3-way-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">SAUCE</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col justify-content-center  d-flex mb-3">
+            <a href="{% url 'products_criteria' %}?category=Merch">
+                <div class="card product-card">
+                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">MERCH</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
 {% endblock %} {% block postloadjs %}
 <!--AOS SCript-->
 <script>
