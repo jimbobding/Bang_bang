@@ -96,7 +96,7 @@
           style="width: 18rem; height: 18rem;"
         >
           {% if product.image %}
-          <a href="">
+          <a href="{% url 'product_detail' product.id  %}">
             <img
               class="img-fluid product-card"
               src=" {{ product.image.url }}"

@@ -11,7 +11,7 @@ from django.views.generic import (
 from .models import Post
 
 
-def bloghome(request):
+def blog_home(request):
     context = {
         'posts': Post.objects.all()
     }
@@ -20,7 +20,7 @@ def bloghome(request):
 
 class PostListView(ListView):
     model = Post
-    template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'blog/blog_home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 10 

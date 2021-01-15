@@ -211,9 +211,11 @@ a.article-title:hover {
   margin-top: 40px;
 }
 
+/* ------------------------------- Home */
 
 .product-card {
     width: 18rem;
     height: 18rem;
+    box-shadow: 1px 2px 3px black;
 }
 

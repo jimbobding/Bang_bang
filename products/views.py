@@ -89,7 +89,16 @@ def products_criteria(request):
         'current_sorting': current_sorting,
     }
 
-
     return render(request, "products/products_criteria.html", context)
 
-   
+
+def product_detail(request, product_id):
+    """ A view to show all products including sorting and searching quries  """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, "products/product_detail.html", context)
