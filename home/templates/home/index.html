@@ -105,7 +105,7 @@
 <div class="container">
     <div class="row ">
         <div class="col justify-content-center  d-flex ">
-            <a href="{% url 'products_criteria' %}?category=Sauce">
+            <a href="{% url 'all_products' %}?category=Sauce">
                 <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
                     <img class="img-fluid product-img" src=" {{ MEDIA_URL }}3-way-veg.jpg" alt="{{ c.name }}" />
                     <div class="card-body">
@@ -116,7 +116,7 @@
         </div> 
 
         <div class="col justify-content-center  d-flex mb-3">
-            <a href="{% url 'products_criteria' %}?category=Merch">
+            <a href="{% url 'all_products' %}?category=Merch">
                 <div class="card product-card">
                     <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg" alt="{{ c.name }}" />
                     <div class="card-body">
