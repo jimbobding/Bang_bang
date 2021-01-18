@@ -24,7 +24,7 @@ from home import views as home_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('profile/', user_views.profile, name='profile'),
+    path('profile/', include('profiles.urls')),
     path('', home_views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('products/', include('products.urls')),
