@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
-    'profiles.apps.UsersConfig',
+    'profiles'
 
 ]
 
