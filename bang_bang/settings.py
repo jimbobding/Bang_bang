@@ -40,7 +40,7 @@ ALLOWED_HOSTS = ['sunnys-bang-bang.herokuapp.com', 'localhost']
 INSTALLED_APPS = [
 
     'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
+
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
-    'profiles'
+    'profiles.apps.UsersConfig',
 
 ]
 
