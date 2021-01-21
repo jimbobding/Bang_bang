@@ -13,80 +13,35 @@
 </div>
 
 <div class="subscription-container">
-  <div class="container">
+    <div class="container">
 
-      <div
-        class="col-sm-12 col-md-8 col-lg-6 mb-3 mt-3 jumbotron jumbotron-subscriptions text-center"
-      >
+        <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mt-3 jumbotron jumbotron-subscriptions text-center">
 
-        <h2 class="text-center header-section">
-          <strong>Chillies</strong>
-        </h2>
-        <hr class="w-50 mt-4" />
-        <p class="text-center landing-paragraph mb-lg-4 mt-lg-4">
-          Chillies come in all different sizes and flvours.
-          <br />We have a selection of chillies at the hear of our sauces <br />Come see the chillies
-        </p>
+            <h2 class="text-center header-section">
+                <strong>Chillies</strong>
+            </h2>
+            <hr class="w-50 mt-4" />
+            <p class="text-center landing-paragraph mb-lg-4 mt-lg-4">
+                Chillies come in all different sizes and flvours.
+                <br />We have a selection of chillies at the hear of our sauces <br />Come see the chillies
+            </p>
 
-        <a
-          href=""
-          type="button"
-          class="btn btn-outline-primary btn-1 text-center"
-          >Chillies</a
-        >
-      </div>
-    </div>
-  </div>
-
-
-<div class="container pt-3">
-    <div class="row">
-        <div class="col-6 home-col ">
-            <img src="{{ MEDIA_URL }}sauce-hand.jpg" alt="" style="width: auto;max-height: 100% "
-                class="img-fluid veg-basket-img rounded mx-auto d-block mx-auto">
-                
-
-        </div>
-        <div class="col-6 home-col orange">
-            <div class="mt-5">
-                <h2 class="text-center header-section">
-                    <strong>Sauce</strong>
-                </h2>
-                <hr class="w-50 mt-4" />
-                <p class="text-center landing-paragraph mb-lg-4 mt-lg-4">
-             
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 blue home-col">
-            <h1>left</h1>
-        </div>
-        <div class="col-6">
-            <img src="{{ MEDIA_URL }}homemade-sauce.jpg" alt="" height="300"
-                class="img-fluid veg-basket-img rounded mx-auto d-block mx-auto">
-
+            <a href="" type="button" class="btn btn-outline-primary btn-1 text-center">Chillies</a>
         </div>
     </div>
 </div>
 
-<h1>What's my number?</h1>
-        <p>I am thinking of a number between 1 and 10 - can you guess it?</p>
-        <input type="text" id="number">
-        <button id="guess">Guess</button>
-        <p id="message"></p> <a href="">Play again</a>
 
-        <h1>The onclick Event</h1>
 
-<p>The onclick event is used to trigger a function when an element is clicked on.</p>
+<div class="container">
+    <h1>What's my number?</h1>
+    <p>I am thinking of a number between 1 and 10 - can you guess it?</p>
+    <input type="text" id="number">
+    <button id="guess">Guess</button>
+    <p id="message"></p> <a href="">Play again</a>
 
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-
-<button onclick="myFunction()">Click me</button>
-
-<p id="demo"></p>
-
+   
+</div>
 
 <div class="header-container container-fluid">
     <div class="row">
@@ -102,59 +57,83 @@
 </div>
 
 
-<div class="container">
+<div class="container mt-2">
     <div class="row ">
-        <div class="col justify-content-center  d-flex ">
+        <div class="col justify-content-center  d-flex mb-3">
             <a href="{% url 'all_products' %}?category=Sauce">
                 <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
-                    <img class="img-fluid product-img" src=" {{ MEDIA_URL }}3-way-veg.jpg" alt="{{ c.name }}" />
+                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}3-way-veg.jpg"
+                        alt="{{ c.name }}" />
                     <div class="card-body">
                         <h5 class="card-title">SAUCE</h5>
                     </div>
                 </div>
             </a>
-        </div> 
+            <div class="col">
+                <h3 class="text-center">Sauce</h3>
+                <hr>
+                <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id totam a reprehenderit quis ullam!
+                    Labore, doloremque sit deserunt maiores quod corporis error, accusamus odio numquam consequatur
+                    provident assumenda qui ex!</p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="container mt-2">
+    <div class="row ">
+           <div class="col">
+                <h3 class="text-center">Merch</h3>
+                <hr>
+                <p class="text-justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id totam a reprehenderit quis ullam!
+                    Labore, doloremque sit deserunt maiores quod corporis error, accusamus odio numquam consequatur
+                    provident assumenda qui ex!</p>
+            </div>
         <div class="col justify-content-center  d-flex mb-3">
             <a href="{% url 'all_products' %}?category=Merch">
-                <div class="card product-card">
-                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg" alt="{{ c.name }}" />
+                <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
+                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg"
+                        alt="{{ c.name }}" />
+
                     <div class="card-body">
                         <h5 class="card-title">MERCH</h5>
                     </div>
                 </div>
             </a>
+         
         </div>
     </div>
 </div>
+
+
 
 {% endblock %} {% block postloadjs %}
 <!--AOS SCript-->
 <script>
     AOS.init();
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-     
-            var randomNumber = Math.floor((Math.random() * 10)) + 1
-            
-            document.getElementById("guess").onclick =  function() {
-        
-                if (document.getElementById("number").value > randomNumber){
-                    document.getElementById("message").innerHTML = "Too High"
-                    document.getElementById("message").style.color = "red"
-                } else if (document.getElementById("number").value < 
-                           randomNumber){
-                    document.getElementById("message").innerHTML = "Too Low!"
-                    document.getElementById("message").style.color = "blue"
-                } else {
-                    document.getElementById("message").innerHTML = "That's it"
-                    document.getElementById("message").style.color = "green"
-                }
-                
-            }
-       
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    var randomNumber = Math.floor((Math.random() * 10)) + 1
+
+    document.getElementById("guess").onclick = function () {
+
+        if (document.getElementById("number").value > randomNumber) {
+            document.getElementById("message").innerHTML = "Too High"
+            document.getElementById("message").style.color = "red"
+        } else if (document.getElementById("number").value <
+            randomNumber) {
+            document.getElementById("message").innerHTML = "Too Low!"
+            document.getElementById("message").style.color = "blue"
+        } else {
+            document.getElementById("message").innerHTML = "That's it"
+            document.getElementById("message").style.color = "green"
+        }
+
+    }
+
 
 
 
