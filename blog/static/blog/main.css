@@ -16,9 +16,6 @@ body {
   margin-top: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
-}
 
 ul {
   margin: 0;
@@ -95,6 +92,8 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
+/* ------------------------------- Allauth */
+
 .allauth-form-inner-content p {
   margin-top: 1.5rem; /* mt-4 */
   color: black; /* text-secondary */
@@ -153,7 +152,7 @@ a.article-title:hover {
 
 /* ------------------------------- Home */
 
-
+/* images */
 .hero-image {
   background: url("/media/it-bangs.jpg") no-repeat center center fixed;
   object-fit:cover;
@@ -162,7 +161,60 @@ a.article-title:hover {
   border: 1px solid black !important;
 }
 
+.about-img {
+  background: url("/media/sunny-double.jpg") no-repeat center center fixed;
+  background-attachment: fixed;   
+  object-fit:cover;
+  height: 100vh;
+  position: inline-block;
+}
+ 
+/* cards */
 
+.card-about {
+    width: 75vh;
+}
+
+.product-card {
+    width: 18rem;
+    height: 18rem;
+    background-color: #FFF;
+    border: none;
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+}
+
+.product-card:hover {
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(219, 14, 14, 0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(219, 14, 14, 0.75);
+  box-shadow: 10px 10px 93px 0px rgba(219, 14, 14, 0.75);
+  transform: scale( 1.1);
+}
+
+.card-1 {
+    top: 350px;
+    width: 400px;
+    z-index: 1;
+    height: 50vh;
+}
+
+.divide {
+    height: 50px;
+    background-color: black;;
+}
+
+.about-container {
+    box-shadow: 0 0 10px black;
+}
+
+.box-shadow
+{
+box-shadow: 0 0 10px black;
+}
+
+/* Headings & Text*/
 
 .title-font {
   position: relative;
@@ -177,79 +229,94 @@ a.article-title:hover {
     color: green;
 }
 
-.home-col {
-    height: 400px;
-    border: 1px black solid;
+/* Padding*/
+
+.padding-top {
+   padding-top: 50px;
 }
 
-.jumbotron-subscriptions {
-  margin-top: 0%;
-  color: white;
-  background-color: rgb(253, 89, 86, 0.5);
-  z-index: 3;
+.padding-bottom {
+   padding-bottom: 50px;
 }
 
-.subscription-container {
-  background-color: salmon;
-  background: radial-gradient(
-      rgba(249, 238, 238, 0.91),
-      rgba(152, 142, 142, 0.04)
-    ),
-    url("/media/chillies.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.header-section {
-  text-align: center;
-  margin-top: 40px;
+.sub-heading, .hero-title {
+    text-shadow: 1px 1px black;
+    animation: mymove 12s infinite;
 }
 
 
-.product-card {
-    width: 18rem;
-    height: 18rem;
-    box-shadow: 1px 2px 3px black;
+@keyframes mymove {
+  50% {text-shadow: 10px 20px 30px red;}
 }
 
 
-.animated-word {
-	font-family: Helvetica;
-	letter-spacing: 0.4em;
-	font-weight: 200;
-	font-size: 20px;
-	text-align: center;
-	color: #202125;
-  cursor: pointer;
-  max-width: 600px; 
-  width: 100%; 
-  outline: 3px solid;
-  outline-color: rgba(71, 126, 232,0.5);
-  outline-offset: 70px;
-  transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
-}
 
-.animated-word:hover {
-	color: rgba(71, 126, 232, 0.7);
-  outline-color: rgba(71, 126, 232, 0);
-  outline-offset: 100px;
-}
 
-.about-img {
-  background: url("/media/sunny-double.jpg") no-repeat center center fixed;
-  object-fit:cover;
-  height: 100vh;
-}
-
-.hero-btn {
-  height: 20px;
+/* The card */
+.the-card {
+  position: relative;
+  height: 450px;
+  width: 900px;
+  margin: 200px auto;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   display: block;
-  align-items: center;
-position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.about-btn {
 
+
+.no-border{
+    border: none;
 }
+
+
+.d-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    line-height:  60px;
+    border:  2px solid black;
+    text-align:  center;
+    font-weight: 900;
+    padding:  0px!important;
+    font-size:  20px;
+    color:  black;
+    top: 30%;
+    position: relative;
+
+ }
+
+.d-button:hover  {
+     color: red;
+     background:  rgba(255, 255, 255, 0.2);
+     transform: scale( 1.75);
+     outline-offset: 70px;
+
+ }
+
+.card-body {
+    border: none;
+}
+
+.no-d {
+    text-decoration: none;
+}
+
+ a  {
+    text-decoration: none;
+    text-align: center;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.sub-heading {
+    color: #000;
+}
+

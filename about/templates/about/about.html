@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="header-container container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="about-hero-image">
+                <div class="title-font  shadow px-2 mx-auto">
+                    <h1 class="text-center my-auto hero-title">About</h1>
+                    <p class="text-center">What we do</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="fond"><span class="s1">Bang</span><span class="s2">Bang</span></div>
+            <div class="card">
+                <div class="thumbnail"><img class="left" src="{{ MEDIA_URL }}sunny-double.jpg"></div>
+                <div class="right">
+                    <h1>Why you Need More Magnesium in Your Daily Diet</h1>
+
+                    <div class="separator"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore eligendi, corrupti quibusdam
+                        explicabo
+                        mollitia ducimus perspiciatis omnis sint labore voluptates veniam consequatur fugit suscipit
+                        placeat
+                        officia illum ipsa non maxime?</p>
+                </div>
+                <div class="col">
+                    <ul class="mt-5">
+                        <li><i class="fa fa-eye fa-2x"></i></li>
+                        <li><i class="fa fa-heart-o fa-2x"></i></li>
+                        <li><i class="fa fa-mortar-pestle fa-2x"></i></li>
+                        <li><i class="fa fa-pepper-hot fa-2x"></i></li>
+
+
+                    </ul>
+                </div>
+                <div class="fab"><i class="fa fa-arrow-down fa-3x"> </i></div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="continer">
+    <div class="row">
+        <div class="col">
+            <div class="card the-card card-1">
+
+                <img class="img-fluid w-100 mx-auto d-block mx-auto about-img" src="{{ MEDIA_URL }}sunny-double.jpg"
+                    alt="" />
+            </div>
+            <div class="col">
+                <div class="card the-card">
+                    <h3>STuff</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, unde? Amet sint eius
+                        accusantium iusto officia ipsam, quibusdam excepturi mollitia alias non ratione eum perferendis
+                        ea, cupiditate qui eveniet quidem.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% block postloadjs %}
+<!--AOS SCript-->
+<script>
+    AOS.init();
+</script>
+<!--AOS SCript End-->
+{% endblock %} {% include 'includes/footer.html' %}

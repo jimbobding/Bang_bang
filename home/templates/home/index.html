@@ -14,37 +14,69 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row text-center">
-        <div class="col justify-content-center ">
-             <div class="about-img">
-        
-         <a href="" type="button" class="hero-btn animated-word ">About me Darrrrg</a>
-        
+
+
+<div class="divide">
+
+</div>
+
+<div class="container about-container mt-4 mb-4  ">
+    <div class="row ">
+        <div class="col justify-content-center d-flex">
+            <div class="card card-about  ">
+                <img src="{{ MEDIA_URL }}sunny-double.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay text-center">
+                    <a href="{% url 'about' %}" type="button" class="d-button ">About me Darrrrg</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="subscription-container">
-    <div class="container">
 
-        <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mt-3 jumbotron jumbotron-subscriptions text-center">
 
-            <h2 class="text-center header-section">
-                <strong>Chillies</strong>
-            </h2>
-            <hr class="w-50 mt-4" />
-            <p class="text-center landing-paragraph mb-lg-4 mt-lg-4">
-                Chillies come in all different sizes and flvours.
-                <br />We have a selection of chillies at the hear of our sauces <br />Come see the chillies
-            </p>
-
-            <a href="" type="button" class="btn btn-outline-primary btn-1 text-center">Chillies</a>
+<div class="header-container padding-top padding-bottom  container-fluid mt-4 mb-5">
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="products-image">
+                <div class="title-font shadow mx-auto px-2">
+                    <h1 class="text-center my-auto hero-title">Products</h1>
+                    <h2 class="text-center sub-heading">Sauce and Merch</h2>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+ <hr>
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col justify-content-center d-flex mb-3">
+            <div class="card no-border " style="width: 18rem;">
+                <a href="{% url 'all_products' %}?category=Sauce">
+                    <img class=" product-img product-card" src=" {{ MEDIA_URL }}3-way-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body no-d ">
+                        <h3 class="text-center">Sauce</h3>
+                        <p class="card-text">All the Bang Bang sauce</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col justify-content-center d-flex mb-3">
+
+            <div class="card no-border" style="width: 18rem;">
+                <a href="{% url 'all_products' %}?category=Merch">
+                    <img class=" product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg" alt="{{ c.name }}" />
+                    <div class="card-body">
+                        <h3 class="text-center">Merch</h3>
+                        <p class="card-text ">Check out all the new Bang Bang Merch</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="container justify-content-center">
@@ -55,69 +87,6 @@
     <p id="message"></p> <a href="">Play again</a>
 </div>
 
-<div class="header-container container-fluid">
-    <div class="row">
-        <div class="col-12 px-0">
-            <div class="products-image">
-                <div class="title-font shadow mx-auto px-2">
-                    <h1 class="text-center my-auto hero-title">Products</h1>
-                    <p class="text-center">Sauce and Merch</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="container mt-2">
-    <div class="row">
-        <div class="col justify-content-center  d-flex mb-3">
-            <a href="{% url 'all_products' %}?category=Sauce">
-                <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
-                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}3-way-veg.jpg"
-                        alt="{{ c.name }}" />
-                    <div class="card-body">
-                        <h5 class="card-title">SAUCE</h5>
-                    </div>
-                </div>
-            </a>
-            <div class="col">
-                <h3 class="text-center">Sauce</h3>
-                <hr>
-                <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id totam a
-                    reprehenderit quis ullam!
-                    Labore, doloremque sit deserunt maiores quod corporis error, accusamus odio numquam consequatur
-                    provident assumenda qui ex!</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container mt-2">
-    <div class="row">
-        <div class="col">
-            <h3 class="text-center">Merch</h3>
-            <hr>
-            <p class="text-justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id totam a reprehenderit
-                quis ullam!
-                Labore, doloremque sit deserunt maiores quod corporis error, accusamus odio numquam consequatur
-                provident assumenda qui ex!</p>
-        </div>
-        <div class="col justify-content-center  d-flex mb-3">
-            <a href="{% url 'all_products' %}?category=Merch">
-                <div class="card poroduct-card" style="width: 18rem; height: 18rem;">
-                    <img class="img-fluid product-img product-card" src=" {{ MEDIA_URL }}orgy-veg.jpg"
-                        alt="{{ c.name }}" />
-
-                    <div class="card-body">
-                        <h5 class="card-title">MERCH</h5>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-    </div>
-</div>
 
 
 
